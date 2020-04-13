@@ -59,6 +59,7 @@ $ cat requests
 ```
 
 Query using curl
+
 `$ curl -H "Content-Type: application/x-ndjson" -XGET localhost:9200/_msearch --data-binary "@requests"; echo
 `
 
