@@ -11,16 +11,23 @@
 `POST /_search`
 
 ## Search a specific index
+
 `curl -GET "localhost:9200/customers/_search?q=wyoming&pretty"`
 
 ## Search in several indices
+
 `curl -GET "localhost:9200/customers,products/_search?q=user:wyoming&pretty"`
 
 ## Search in all indices
+
 `curl -X GET "localhost:9200/_search?q=name:kimchy&pretty"`
+
 OR
+
 `curl -X GET "localhost:9200/_all/_search?q=name:kimchy&pretty"`
+
 OR
+
 `curl -X GET "localhost:9200/*/_search?q=name:kimchy&pretty"`
 
 ## Multi search API
@@ -36,6 +43,7 @@ GET /twitter/_msearch
 {"query" : {"match_all" : {}}}
 ```
 
+Create payload name requests
 ```
 $ cat requests
 {"index" : "test"}
@@ -50,6 +58,7 @@ $ cat requests
 {"query" : {"match_all" : {}}}
 ```
 
+Query using curl
 `$ curl -H "Content-Type: application/x-ndjson" -XGET localhost:9200/_msearch --data-binary "@requests"; echo
 `
 
