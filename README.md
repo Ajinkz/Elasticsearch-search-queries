@@ -1,5 +1,7 @@
 # Elasticsearch-search-queries
 
+Write search request API to search request against one or more clusters of Elasticsearch
+
 ## Searching using the query parameter
 
 `GET /<index>/_search`
